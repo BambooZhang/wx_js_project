@@ -1,0 +1,12 @@
+<!--index.wxml-->
+
+
+
+<view class="container">
+
+
+<text>快速新建云函数</text>
+
+</view>
+
+

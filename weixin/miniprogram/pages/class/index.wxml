@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<import src="../template/activity/activity.wxml"></import>
+
+<view class="container">
+
+
+<!-- class start-->
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>
+<!-- class end-->
+
+
+
+<!-- 图文标题模块 -->
+<template is="imgTtiltFlow" data="{{iteamList}}"></template> 
+
+
+
+
+
+
+
+</view>
+
+

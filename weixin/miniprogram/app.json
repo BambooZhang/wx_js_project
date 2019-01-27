@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/class/index",
+    "pages/detail/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "竹子",
+    "navigationBarTextStyle": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#464a56",
+    "selectedColor": "#6595e9",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home_normal@48.png",
+        "selectedIconPath": "images/home_select@48.png"
+      },
+      {
+        "pagePath": "pages/class/index",
+        "text": "分类",
+        "iconPath": "images/sort_normal@2x.png",
+        "selectedIconPath": "images/sort_select@2x.png"
+      },
+      {
+        "pagePath": "pages/class/index",
+        "text": "我的",
+        "iconPath": "images/my_normal@2x.png",
+        "selectedIconPath": "images/my_select@2x.png"
+      }
+    ]
+  }
+}

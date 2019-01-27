@@ -1,0 +1,45 @@
+<!--index.wxml-->
+
+<import src="../template/activity/activity.wxml"></import>
+
+<view class="container">
+
+
+<!-- banner start-->
+
+<swiper
+  indicator-dots="{{swiper.indicatorDots}}"
+  autoplay="{{swiper.autoplay}}"
+  interval="{{swiper.interval}}"
+  duration="{{swiper.duration}}"
+>
+  <block wx:for="{{swiper.imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+
+ <!-- 分类导航 -->
+  <view class="navs">
+    <block wx:for-items="{{navItems}}" wx:key="name">
+      <view class="nav-item" data-typeid="{{item.typeId}}"  bindtap="onItemClick" >
+        <image src="{{item.imageurl}}" class="nav-image" />
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+
+<!-- 活动模块 -->
+<template is="activity" data="{{activityData,iteamList}}"></template> 
+
+
+
+
+
+
+</view>
+
+

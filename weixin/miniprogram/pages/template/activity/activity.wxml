@@ -1,0 +1,51 @@
+<!--index.wxml-->
+
+<!-- 活动模板 start-->
+<template name="activity">
+
+
+<view class="welfare-container"> 
+  <view class="activity-title">
+    <text class="title">{{activityData.title}}</text>
+    <view class="sub_title">
+      <text>{{activityData.subTitle}}</text>
+    </view>
+  </view>   
+
+<!-- 图文流 模块 -->
+<template is="imgTtiltFlow" data="{{...activityData}}"></template> 
+
+</view> 
+
+</template>
+<!-- 活动模板 end-->
+
+
+
+<!-- 图文标题 副标题 流布局 模板 START -->
+<template name="imgTtiltFlow">
+  
+<!-- 图文标题 副标题 流布局 start-->
+  <scroll-view scroll-y="true">
+      <view class="welfares">
+         <block wx:for-items="{{iteamList}}" wx:key="name">
+          <view class="welfares-good"  bindtap="onItemClick"  data-goodid="{{item.goodId}}" data-typeid="{{item.typeId}}"  >
+            <view>
+              <image src="{{item.imageurl}}" class="welfares-image" mode="widthFix"/> 
+            </view>
+            <view class="product-name">
+              {{item.name}}
+            </view>
+            <view class="product-price-wrap">
+              <p class="product-price-new">￥{{item.newprice}}</p>  
+              <p class="product-price-old">￥{{item.oldprice}}</p> 
+              <p class="discount">{{item.discount}}折</p>  
+            </view>
+
+          </view>
+        </block> 
+      </view>
+  </scroll-view>  
+
+</template>
+<!-- 图文标题 副标题 流布局 模板 end-->
